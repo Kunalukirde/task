@@ -1,0 +1,26 @@
+<div class="text-end p-4">
+    <button mat-button (click)="onNoClick()"><mat-icon>close</mat-icon></button>
+</div>
+<form [formGroup]="addemployeefrm" (ngSubmit)="addemployee()" class="form">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput formControlName="username">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Role</mat-label>
+            <input matInput formControlName="role">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions  style="padding-left: 55px;">
+        <button type="submit" class="btn btn-secondary" cdkFocusInitial>Add Employee</button>
+    </div>
+</form>

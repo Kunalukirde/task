@@ -1,0 +1,20 @@
+<div class="text-end p-4">
+    <button mat-button (click)="onNoClick()"><mat-icon>close</mat-icon></button>
+</div>
+<form [formGroup]="addemployeefrm" (ngSubmit)="addemployee()" class="form">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Employee Name</mat-label>
+            <input matInput formControlName="employeename">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Employee ID</mat-label>
+            <input matInput formControlName="employeeid">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions  style="padding-left: 55px;">
+        <button type="submit" class="btn btn-success" cdkFocusInitial>Add Employee</button>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="drawer" mode="side" opened>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center p-3">
+                    <h2 class="fw-bold">Welcome {{username}}</h2>
+                </div>
+                <div class="col-12">
+                    <ul>
+                        <li [class.active]="isLinkActive('/dashboard')" routerLink="/dashboard"><button class="btn">Dashboard</button></li>
+                    </ul>
+                </div>
+                <footer class="footer">
+                    <div class="col-12 text-center">
+                        <button class="btn logoutbtn">Logout</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </mat-drawer>
+  </mat-drawer-container>

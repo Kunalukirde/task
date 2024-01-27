@@ -1,0 +1,26 @@
+<mat-card class="mat-card">
+    <mat-card-content>
+        <form [formGroup]="loginfrm" (ngSubmit)="onSubmit()">
+            <div class="example-container">
+              <mat-form-field>
+                <mat-label>User ID</mat-label>
+                <input matInput formControlName="userid">
+                <mat-error *ngIf="loginfrm.get('userid')?.invalid && (loginfrm.get('userid')?.dirty || loginfrm.get('userid')?.touched)">
+                    userID is required
+                  </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password">
+                    <mat-error *ngIf="loginfrm.get('password')?.invalid && (loginfrm.get('password')?.dirty || loginfrm.get('password')?.touched)">password is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn sbmitbtn" mat-button>Login</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+
